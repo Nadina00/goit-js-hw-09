@@ -47,7 +47,8 @@ startTimer() {
       const deltaTime = selectTime - currentTime;
       const componentsTimer = convertMs(deltaTime);
       this.updateComponentsTimer(componentsTimer);
-      if (deltaTime <= 0) {
+      console.log(deltaTime);
+      if (deltaTime <= 1000) {
         this.stopTimer();
       }
     }, 1000);
@@ -61,6 +62,7 @@ startTimer() {
 
   stopTimer() {
     clearInterval(this.timerID);
+    
   }
 };
  
